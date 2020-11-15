@@ -14,10 +14,7 @@ socket.addEventListener('message', function (event) {
             ));
             break;
         case 'set_value':
-            console.log(data)
-            console.log(getObject(data.object)[data.name])
             getObject(data.object)[data.name] = data.value;
-            console.log(getObject(data.object)[data.name])
             break;
         case 'get_properties':
             socket.send(JSON.stringify(
